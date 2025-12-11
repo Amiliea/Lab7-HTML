@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №7 — jQuery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+
+    <h1>Лабораторная работа №7: jQuery</h1>
+
+    <section class="task">
+        <h2>Задача A: Вкладки (Tabs)</h2>
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="tab-1">О нас</button>
+                <button class="tab-btn" data-tab="tab-2">Отзывы</button>
+                <button class="tab-btn" data-tab="tab-3">Контакты</button>
+            </div>
+            <div class="tab-content active" id="tab-1">
+                <p>Мы — лучший туроператор в мире! Более 10 лет опыта.</p>
+            </div>
+            <div class="tab-content" id="tab-2">
+                <p>Клиенты нас обожают! ★★★★★</p>
+            </div>
+            <div class="tab-content" id="tab-3">
+                <p>Тел: +7 (999) 123-45-67 | Email: info@travel.ru</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="task">
+        <h2>Задача B: Плавная прокрутка</h2>
+        <nav class="smooth-nav">
+            <a href="#section-1">Секция 1</a> |
+            <a href="#section-2">Секция 2</a> |
+            <a href="#section-3">Секция 3</a>
+        </nav>
+
+        <div id="section-1" class="section">Секция 1 — Вершина страницы</div>
+        <div id="section-2" class="section">Секция 2 — Середина</div>
+        <div id="section-3" class="section">Секция 3 — Низ страницы</div>
+    </section>
+
+    <section class="task">
+        <h2>Задача C: AJAX — случайная цитата</h2>
+        <button id="loadQuote">Загрузить цитату</button>
+        <blockquote id="quote">
+            <p>Нажмите кнопку, чтобы загрузить цитату...</p>
+            <cite></cite>
+        </blockquote>
+    </section>
+
+    <section class="task">
+        <h2>Задача D: jQuery UI — Drag & Drop и Datepicker</h2>
+        <div id="draggable" class="ui-widget-content">
+            <p>Перетащи меня!</p>
+        </div>
+        <br><br>
+        <label>Выберите дату: </label>
+        <input type="text" id="datepicker">
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag-and-Drop на чистом JS</title>
+    <style>
+        #draggable {
+            width: 150px;
+            padding: 15px;
+            background: #74b9ff;
+            color: white;
+            text-align: center;
+            cursor: move;
+            user-select: none;
+            position: relative;
+        }
+        #draggable.dragging {
+            opacity: 0.5;
+        }
+        body {
+            min-height: 200vh; 
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<div id="draggable">
+    <p>Перетащи меня!</p>
+</div>
+
+<script>
+</script>
+</body>
+</html>
